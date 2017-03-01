@@ -3,10 +3,16 @@ angular.module('main')
         .controller('ListCtrl', ['$scope', '$ionicModal', 'MainServ', function ($scope, $ionicModal, MainServ) {
 
                 //search options in the modal
-                $scope.searchOptions = {};
+                /* fields searched : name: '',
+                    region: '',
+                    membership: '',
+                    membershipCard: '',
+                    clubGolf: '',
+                    getIntoGolf: ''*/
+                
+                $scope.searchOptions = { };
                 
                 //get the list of the golfs
-                
                 $scope.datas = MainServ.getGolfData();
         
                 //the modal
@@ -24,10 +30,5 @@ angular.module('main')
                 $scope.closeModal = function () {
                     $scope.modal.hide();
                 };
-
-                //Cleanup the modal when we're done with it!
-                $scope.$on('$destroy', function () {
-                    $scope.modal.remove();
-                });
 
             }]);

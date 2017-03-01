@@ -3,7 +3,7 @@
         <div class="bar bar-header item-input-inset bar-positive">
             <label class="item-input-wrapper">
                 <i class="icon ion-ios-search placeholder-icon"></i>
-                <input type="search" placeholder="Club/course name" ng-model="searchOptions.name">
+                <input id="search" type="search" placeholder="Club/course name" ng-model="searchOptions.name">
             </label>
             <button class="button button-icon icon ion-settings" ng-click="openModal()"></button>
         </div>
@@ -14,7 +14,7 @@
              ui-sref="main.listDetail({ id: data.id })"
              class="golfs"
              >
-            <div class="golfcards" style="background-image:url('{{data.img}}');">
+            <div class="golfcards" style="background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url({{data.img}}) ;">
                 <h1>{{data.name}}</h1>
             </div>
         </div>

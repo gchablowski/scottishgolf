@@ -1,7 +1,7 @@
 'use strict';
 
 describe('module: main, service: Main', function () {
-
+/*
   // load the service's module
   beforeEach(module('main'));
   // load all the templates to prevent unexpected $http requests from ui-router
@@ -25,5 +25,5 @@ describe('module: main, service: Main', function () {
       expect(Main.someData.binding).toEqual('Yes! Got that databinding working');
     });
   });
-
+*/
 });
