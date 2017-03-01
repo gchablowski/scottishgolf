@@ -22,12 +22,12 @@ angular.module('main', [
         views: {
           'pageContent': {
             templateUrl: 'main/templates/list.html',
-            // controller: '<someCtrl> as ctrl'
+            controller: 'ListCtrl as ctrl'
           }
         }
       })
       .state('main.listDetail', {
-        url: '/list/detail',
+        url: '/list/detail/:id',
         views: {
           'pageContent': {
             templateUrl: 'main/templates/list-detail.html',

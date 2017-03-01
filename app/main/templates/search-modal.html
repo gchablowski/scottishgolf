@@ -1,0 +1,44 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive">
+        <h1 class = "title">Search Options</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <form name="optionsform">
+            <label class = "item item-input item-select">
+                <div class = "input-label">
+                    Region
+                </div>
+
+                <select ng-model="$parent.searchOptions.region">
+                    <option value="">Select an region</option>
+                    <option value="66">Angus</option>
+                    <option value="65">Argyll &amp; Bute</option>
+                    <option value="67">Ayrshire</option>
+                    <option value="68">Borders</option>
+                    <option value="69">Clackmannanshire</option>
+                    <option value="70">Dumbartonshire</option>
+                    <option value="71">Fife</option>
+                    <option value="72">Glasgow</option>
+                    <option value="73">Lanarkshire</option>
+                    <option value="74">Lothians</option>
+                    <option value="76">North</option>
+                    <option value="75">North East</option>
+                    <option value="77">Perth &amp; Kinross</option>
+                    <option value="78">Renfrewshire</option>
+                    <option value="79">South</option>
+                    <option value="80">Stirlingshire</option>
+                </select>
+            </label>
+
+            <ion-toggle ng-model="$parent.searchOptions.membership" ng-false-value="undefined">Membership</ion-toggle>
+            <ion-toggle ng-model="$parent.searchOptions.membershipCard" ng-false-value="undefined">Scottish Golf Membership Card</ion-toggle>
+            <ion-toggle ng-model="$parent.searchOptions.clubGolf" ng-false-value="undefined">ClubGolf</ion-toggle>
+            <ion-toggle ng-model="$parent.searchOptions.getIntoGolf" ng-false-value="undefined">Get into Golf</ion-toggle>
+
+            <button class="button button-block button-positive" ng-click="closeModal()">Close</button>
+        </form>
+
+    </ion-content>
+
+</ion-modal-view>
