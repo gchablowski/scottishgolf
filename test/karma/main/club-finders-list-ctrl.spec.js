@@ -1,8 +1,8 @@
 'use strict';
 
-describe('module: main, controller: ListCtrl', function () {
+describe('module: main, controller: clubFindersListCtrl', function () {
 
-    var ListCtrl, $q, deferred, scope, MainServMock;
+    var clubFindersListCtrl, $q, deferred, scope, MainServMock;
 
     // load the controller's module
     beforeEach(module('main'));
@@ -37,7 +37,7 @@ describe('module: main, controller: ListCtrl', function () {
 
         scope = $rootScope.$new();
 
-        ListCtrl = $controller('ListCtrl', {
+        clubFindersListCtrl = $controller('ClubFindersListCtrl', {
             $scope: scope,
             MainServ: MainServMock
         });

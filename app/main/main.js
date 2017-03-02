@@ -8,7 +8,7 @@ angular.module('main', [
 .config(function ($stateProvider, $urlRouterProvider) {
 
   // ROUTING with ui.router
-  $urlRouterProvider.otherwise('/main/list');
+  $urlRouterProvider.otherwise('/main/club-finders/list');
   $stateProvider
     // this state is placed in the <ion-nav-view> in the index.html
     .state('main', {
@@ -17,21 +17,21 @@ angular.module('main', [
       templateUrl: 'main/templates/menu.html',
       controller: 'MenuCtrl as menu'
     })
-      .state('main.list', {
-        url: '/list',
+      .state('main.clubFinderslist', {
+        url: '/club-finders/list',
         views: {
           'pageContent': {
-            templateUrl: 'main/templates/list.html',
-            controller: 'ListCtrl as ctrl'
+            templateUrl: 'main/templates/club-finders-list.html',
+            controller: 'ClubFindersListCtrl as ctrl'
           }
         }
       })
-      .state('main.listDetail', {
-        url: '/list/detail/:id',
+      .state('main.clubFindersListDetail', {
+        url: '/club-finders/list/detail/:id',
         views: {
           'pageContent': {
-            templateUrl: 'main/templates/list-detail.html',
-            controller: 'ListDetailCtrl as ctrl'
+            templateUrl: 'main/templates/club-finders-list-detail.html',
+            controller: 'ClubFindersListDetailCtrl as ctrl'
           }
         }
       })

@@ -3,11 +3,11 @@
 describe('List page', function () {
 
     beforeEach(function () {
-        browser.get('/#/main/list');
+        browser.get('/#/main/club-finders/list');
     });
 
     it('Should have a title', function () {
-        expect(browser.getTitle()).toEqual('List');
+        expect(browser.getTitle()).toEqual('Club finders');
     });
 
     it('Should get a list with 6 elements', function () {
@@ -68,12 +68,12 @@ describe('List page', function () {
         expect(elements.get(2).getText()).toEqual('');
     });
     
-    it('should allow me to go to thedetails page when I click on a  elment', function () {
+    it('should allow me to go to the details page when I click on a  elment', function () {
         var elements = element.all(protractor.By.css('.golfs')).first();
         
         elements.click();
         
-        expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/#/main/list/detail/1");
+        expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/#/main/club-finders/list/detail/1");
     });
     
     

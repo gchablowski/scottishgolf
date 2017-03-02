@@ -3,7 +3,7 @@
 describe('List page', function () {
 
     beforeEach(function () {
-        browser.get('/#/main/list/detail/1');
+        browser.get('/#/main/club-finders/list/detail/1');
     });
 
     it('Should have a title', function () {

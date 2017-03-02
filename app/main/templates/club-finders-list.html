@@ -1,4 +1,4 @@
-<ion-view view-title="List">
+<ion-view view-title="Club finders">
     <ion-content>
         <div class="bar bar-header item-input-inset bar-positive">
             <label class="item-input-wrapper">
@@ -11,7 +11,7 @@
         <div collection-repeat="data in datas | filter : searchOptions"
              item-width="100%" 
              item-height="200px"
-             ui-sref="main.listDetail({ id: data.id })"
+             ui-sref="main.clubFindersListDetail({ id: data.id })"
              class="golfs"
              >
             <div class="golfcards" style="background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url({{data.img}}) ;">

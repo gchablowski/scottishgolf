@@ -1,6 +1,6 @@
 'use strict';
 angular.module('main')
-        .controller('ListCtrl', ['$scope', '$ionicModal', 'MainServ', function ($scope, $ionicModal, MainServ) {
+        .controller('ClubFindersListCtrl', ['$scope', '$ionicModal', 'MainServ', function ($scope, $ionicModal, MainServ) {
 
                 //search options in the modal
                 /* fields searched : name: '',

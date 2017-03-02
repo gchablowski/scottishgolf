@@ -1,6 +1,6 @@
 'use strict';
 angular.module('main')
-        .controller('ListDetailCtrl', ["$scope", "$stateParams", 'MainServ', function ($scope, $stateParams, MainServ) {
+        .controller('ClubFindersListDetailCtrl', ["$scope", "$stateParams", 'MainServ', function ($scope, $stateParams, MainServ) {
 
                 //get the param
                 var id = $stateParams.id;

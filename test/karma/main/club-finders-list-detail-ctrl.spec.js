@@ -1,6 +1,6 @@
 'use strict';
 
-describe('module: main, controller: ListDetailCtrl', function () {
+describe('module: main, controller: clubFindersListDetailCtrl', function () {
 
   // load the controller's module
   beforeEach(module('main'));
@@ -8,7 +8,7 @@ describe('module: main, controller: ListDetailCtrl', function () {
   beforeEach(module('ngHtml2Js'));
 
   // instantiate controller
-  var ListDetailCtrl, scope, MainServMock;;
+  var clubFindersListDetailCtrl, scope, MainServMock;;
   
       // define a mock of service called
     beforeEach(function () {
@@ -29,7 +29,7 @@ describe('module: main, controller: ListDetailCtrl', function () {
 
         scope = $rootScope.$new();
 
-        ListDetailCtrl = $controller('ListDetailCtrl', {
+        clubFindersListDetailCtrl = $controller('ClubFindersListDetailCtrl', {
             $scope: scope,
             MainServ: MainServMock
         });
