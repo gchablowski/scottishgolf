@@ -6,7 +6,7 @@
             <button class="button icon ion-bag" ng-click="info = true; offer = true; competition = false;" ng-class="{active: offer}"></button>
             <button class="button ion-ribbon-a" ng-click="info = true; offer = false; competition = true;" ng-class="{active: competition}"></button>
         </div>
-        <div ng-hide="info" class="padding">
+        <div id="info" ng-hide="info" class="padding">
             <p>
                 Par: {{data.par}}<br/>
                 SSS: {{data.sss}}<br/>
@@ -18,12 +18,12 @@
                 <span class="ion-ios-location-outline"></span> {{data.address}}
             </p>
         </div>
-        <div ng-show="offer" class="padding offer">
+        <div id="offer" ng-show="offer" class="padding">
             <ul ng-repeat="offer in data.offers">
             <li>{{offer}}</li>
             </ul>
         </div>
-        <div ng-show="competition" class="padding competition">
+        <div id="competition" ng-show="competition" class="padding">
             <ul ng-repeat="competition in data.competitions">
             <li>{{competition.name}}, {{competition.start}} - {{competition.end}}, {{competition.fee}}</li>
             </ul>

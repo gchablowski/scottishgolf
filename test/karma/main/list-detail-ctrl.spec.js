@@ -8,13 +8,37 @@ describe('module: main, controller: ListDetailCtrl', function () {
   beforeEach(module('ngHtml2Js'));
 
   // instantiate controller
-  var ListDetailCtrl;
-  beforeEach(inject(function ($controller) {
-    ListDetailCtrl = $controller('ListDetailCtrl');
-  }));
+  var ListDetailCtrl, scope, MainServMock;;
+  
+      // define a mock of service called
+    beforeEach(function () {
 
-  it('should do something', function () {
-    expect(!!ListDetailCtrl).toBe(true);
-  });
+        MainServMock = {
+            getGolf: function () {
+                var datas = {data: 1};
+                return datas;
+            }
+        };
+
+        spyOn(MainServMock, 'getGolf').and.callThrough();
+
+    });
+  
+    // instantiate controller
+    beforeEach(inject(function ($controller, $rootScope) {
+
+        scope = $rootScope.$new();
+
+        ListDetailCtrl = $controller('ListDetailCtrl', {
+            $scope: scope,
+            MainServ: MainServMock
+        });
+
+    }));
+
+  it('should call the MainServ service and populate $scope.data', function () {
+        expect(MainServMock.getGolf).toHaveBeenCalled();
+        expect(scope.data).toEqual({data: 1});
+    });
 
 });

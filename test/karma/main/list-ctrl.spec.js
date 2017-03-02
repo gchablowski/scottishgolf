@@ -48,7 +48,7 @@ describe('module: main, controller: ListCtrl', function () {
         expect(scope.searchOptions).toEqual({});
     });
 
-    it('should call the MainServ service and $scope.datas populated', function () {
+    it('should call the MainServ service and populate $scope.datas ', function () {
         expect(MainServMock.getGolfData).toHaveBeenCalled();
         expect(scope.datas).toEqual({data: 1});
     });
