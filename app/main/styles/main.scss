@@ -4,18 +4,33 @@ $white:                 #fff;
     background-color: $white;
 }
 
-.golfcards{
+.golfcards {
     background-size: cover;
     background-repeat: no-repeat;
     height:100%;
+    
+    h1{
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: $white;
+        font-size: 16px;
+    }
 }
 
-.golfcards h1{
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: $white;
-    font-size: 16px;
+.golfimg{
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
 }
+
+.offer, .competition{
+    ul{
+        list-style-type: circle;
+        padding: 5px;
+        margin: 5px;
+    }
+} 
