@@ -2,6 +2,13 @@
 angular.module('main')
         .service('MainServ', function (filterFilter) {
 
+
+            this.getArticle = function (id, type) {
+                var datas = type == 'article' ? this.getBlogData() : this.getNewsData();
+                var filter = filterFilter(datas, {id: id});
+                return filter[0] ? filter[0] : {};
+            };
+
             this.getNewsData = function () {
 
                 var datas =
@@ -69,28 +76,28 @@ angular.module('main')
                             },
                             {
                                 id: 5,
-                                title: 'Lorem ipsum',
+                                title: 'Lorem ipsum 5',
                                 description: 'Lorem ipsum sit amet',
                                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam augue nibh, ornare sit amet velit a, lacinia faucibus mi. Suspendisse ac leo condimentum, volutpat diam nec, gravida velit. Cras quis mattis dolor, varius tristique metus. Nulla luctus mattis tincidunt. Etiam non nibh dui. Sed tristique dolor nec eros hendrerit dignissim id vel nibh. Phasellus a magna molestie, condimentum dui eu, sagittis sapien. Praesent eleifend lacus sed ligula venenatis tempor. Donec nec imperdiet metus. Aliquam mollis dictum urna in feugiat. Nam vulputate pellentesque dapibus. Ut risus sem, varius a consequat at, auctor sed nisi. Sed at augue efficitur, tristique metus id, scelerisque felis. Aliquam malesuada leo vitae magna commodo, vitae mattis purus vehicula. Donec ultricies vitae eros id convallis. Phasellus condimentum ornare sapien a sollicitudin. ',
                                 img: 'main/assets/images/Events.jpg',
                             },
                             {
                                 id: 6,
-                                title: 'Lorem ipsum',
+                                title: 'Lorem ipsum 6',
                                 description: 'Lorem ipsum sit amet',
                                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam augue nibh, ornare sit amet velit a, lacinia faucibus mi. Suspendisse ac leo condimentum, volutpat diam nec, gravida velit. Cras quis mattis dolor, varius tristique metus. Nulla luctus mattis tincidunt. Etiam non nibh dui. Sed tristique dolor nec eros hendrerit dignissim id vel nibh. Phasellus a magna molestie, condimentum dui eu, sagittis sapien. Praesent eleifend lacus sed ligula venenatis tempor. Donec nec imperdiet metus. Aliquam mollis dictum urna in feugiat. Nam vulputate pellentesque dapibus. Ut risus sem, varius a consequat at, auctor sed nisi. Sed at augue efficitur, tristique metus id, scelerisque felis. Aliquam malesuada leo vitae magna commodo, vitae mattis purus vehicula. Donec ultricies vitae eros id convallis. Phasellus condimentum ornare sapien a sollicitudin. ',
                                 img: 'main/assets/images/Events.jpg',
                             },
                             {
                                 id: 7,
-                                title: 'Lorem ipsum',
+                                title: 'Lorem ipsum 7',
                                 description: 'Lorem ipsum sit amet',
                                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam augue nibh, ornare sit amet velit a, lacinia faucibus mi. Suspendisse ac leo condimentum, volutpat diam nec, gravida velit. Cras quis mattis dolor, varius tristique metus. Nulla luctus mattis tincidunt. Etiam non nibh dui. Sed tristique dolor nec eros hendrerit dignissim id vel nibh. Phasellus a magna molestie, condimentum dui eu, sagittis sapien. Praesent eleifend lacus sed ligula venenatis tempor. Donec nec imperdiet metus. Aliquam mollis dictum urna in feugiat. Nam vulputate pellentesque dapibus. Ut risus sem, varius a consequat at, auctor sed nisi. Sed at augue efficitur, tristique metus id, scelerisque felis. Aliquam malesuada leo vitae magna commodo, vitae mattis purus vehicula. Donec ultricies vitae eros id convallis. Phasellus condimentum ornare sapien a sollicitudin. ',
                                 img: 'main/assets/images/Events.jpg',
                             },
                             {
                                 id: 8,
-                                title: 'Lorem ipsum',
+                                title: 'Lorem ipsum 8',
                                 description: 'Lorem ipsum sit amet',
                                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam augue nibh, ornare sit amet velit a, lacinia faucibus mi. Suspendisse ac leo condimentum, volutpat diam nec, gravida velit. Cras quis mattis dolor, varius tristique metus. Nulla luctus mattis tincidunt. Etiam non nibh dui. Sed tristique dolor nec eros hendrerit dignissim id vel nibh. Phasellus a magna molestie, condimentum dui eu, sagittis sapien. Praesent eleifend lacus sed ligula venenatis tempor. Donec nec imperdiet metus. Aliquam mollis dictum urna in feugiat. Nam vulputate pellentesque dapibus. Ut risus sem, varius a consequat at, auctor sed nisi. Sed at augue efficitur, tristique metus id, scelerisque felis. Aliquam malesuada leo vitae magna commodo, vitae mattis purus vehicula. Donec ultricies vitae eros id convallis. Phasellus condimentum ornare sapien a sollicitudin. ',
                                 img: 'main/assets/images/Events.jpg',
@@ -282,9 +289,10 @@ angular.module('main')
                         ;
                 return datas;
             };
+
             this.getGolf = function (id) {
                 var datas = this.getGolfData();
-                var filter = filterFilter(datas, {id: id})
+                var filter = filterFilter(datas, {id: id});
                 return filter[0] ? filter[0] : {};
             }
 

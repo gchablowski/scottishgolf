@@ -27,6 +27,15 @@ angular.module('main', [
                             }
                         }
                     })
+                    .state('main.NewsListDetail', {
+                        url: '/news/list/detail/:type/:id',
+                        views: {
+                            'pageContent': {
+                                templateUrl: 'main/templates/news-list-details.html',
+                                controller: 'NewsListDetailsCtrl as ctrl'
+                            }
+                        }
+                    })
                     .state('main.clubFindersList', {
                         url: '/club-finders/list',
                         views: {

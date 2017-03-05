@@ -1,5 +1,4 @@
 <ion-view view-title="News">
-    <!-- do you want padding? -->
     <ion-content>
 
         <!-- content goes here -->
@@ -7,7 +6,7 @@
         <div class="card">
             <ks-swiper-container override-parameters="swiperParam">
                 <ks-swiper-slide class="swiper-slide carousel" ng-repeat="new in news">
-                    <div ui-sref="main.clubFindersListDetail({ id: data.id })" 
+                    <div ui-sref="main.NewsListDetail({ type: 'news', id: new.id })" 
                          class="newsCards" 
                          style="background-image: url({{new.img}}) ;">
                         <h1>{{new.title}}</h1>
@@ -18,7 +17,7 @@
 
         <ks-swiper-container override-parameters="mosaicParam">
             <ks-swiper-slide class="swiper-slide grid" ng-repeat="article in blog">
-                <div class="card">
+                <div class="card" ui-sref="main.NewsListDetail({ type: 'article', id: article.id })" >
                     <img ng-src="{{article.img}}">
                     <div class="item item-divider">
                         <h2>{{article.title}}</h2>
