@@ -1,0 +1,33 @@
+<ion-view view-title="News">
+    <!-- do you want padding? -->
+    <ion-content>
+
+        <!-- content goes here -->
+
+        <div class="card">
+            <ks-swiper-container override-parameters="swiperParam">
+                <ks-swiper-slide class="swiper-slide" ng-repeat="new in news">
+                    <div ui-sref="main.clubFindersListDetail({ id: data.id })" 
+                         class="newsCards" 
+                         style="background-image: url({{new.img}}) ;">
+                        <h1>{{new.title}}</h1>
+                    </div>
+                </ks-swiper-slide>
+            </ks-swiper-container>
+        </div>
+
+        <ks-swiper-container override-parameters="mosaicParam">
+            <ks-swiper-slide class="swiper-slide" ng-repeat="article in blog">
+                <div class="card">
+                    <img ng-src="{{article.img}}">
+                    <div class="item item-divider">
+                        <h2>{{article.title}}</h2>
+                        <p>{{article.description}}</p>
+                    </div>
+
+                </div>
+            </ks-swiper-slide>
+        </ks-swiper-container>
+
+    </ion-content>
+</ion-view>
