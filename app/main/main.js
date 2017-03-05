@@ -17,7 +17,7 @@ angular.module('main', [
       templateUrl: 'main/templates/menu.html',
       controller: 'MenuCtrl as menu'
     })
-      .state('main.clubFinderslist', {
+      .state('main.clubFindersList', {
         url: '/club-finders/list',
         views: {
           'pageContent': {
@@ -32,6 +32,15 @@ angular.module('main', [
           'pageContent': {
             templateUrl: 'main/templates/club-finders-list-detail.html',
             controller: 'ClubFindersListDetailCtrl as ctrl'
+          }
+        }
+      })
+      .state('main.leaderboardsList', {
+        url: '/leaderboards/list',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/leaderboards-list.html',
+            controller: 'LeaderboardsListCtrl as ctrl'
           }
         }
       })

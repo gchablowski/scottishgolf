@@ -190,5 +190,85 @@ angular.module('main')
                 var filter = filterFilter(datas, {id: id})
                 return filter[0] ? filter[0] : {};
             }
+
+            this.getLeaderBoards = function () {
+
+                var datas =
+                        [
+                            {
+                                rank: 1,
+                                name: 'Lorem Ipsum',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 2,
+                                name: 'Lorem Ipsum 2',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 4,
+                                name: 'Lorem Ipsum 4',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 5,
+                                name: 'Lorem Ipsum 5',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 6,
+                                name: 'Lorem Ipsum 6',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 7,
+                                name: 'Lorem Ipsum 7',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 8,
+                                name: 'Lorem Ipsum 8',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 9,
+                                name: 'Lorem Ipsum 9',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 10,
+                                name: 'Lorem Ipsum 10',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 11,
+                                name: 'Lorem Ipsum 11',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 12,
+                                name: 'Lorem Ipsum 12',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 13,
+                                name: 'Lorem Ipsum 13',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 14,
+                                name: 'Lorem Ipsum 14',
+                                img: 'main/assets/images/character.jpg'
+                            },
+                            {
+                                rank: 15,
+                                name: 'Lorem Ipsum 15',
+                                img: 'main/assets/images/character.jpg'
+                            }
+                        ]
+                        ;
+
+                return datas;
+            };
         }
         );

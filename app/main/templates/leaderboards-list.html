@@ -1,0 +1,17 @@
+<ion-view view-title="National leaderboards">
+    <ion-content>
+        <div class="bar bar-header item-input-inset bar-positive">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input id="search" type="search" placeholder="Name" ng-model="searchOptions">
+            </label>
+        </div>
+
+        <div collection-repeat="data in datas | filter : searchOptions" class="item item-avatar" >
+            <img ng-src="{{data.img}}" />
+            <h2>{{data.name}}</h2>
+            <p>rank: {{data.rank}}</p>
+        </div>
+
+    </ion-content>
+</ion-view>
