@@ -10,7 +10,7 @@ describe('List page', function () {
         expect(browser.getTitle()).toEqual('Club finders');
     });
 
-    it('Should get a list with 6 elements', function () {
+    it('Should get a list of elements', function () {
         var elements = element.all(protractor.By.css('.golfs'));
         expect(elements.count()).toEqual(20);
         expect(elements.get(0).getText()).toEqual('Golspie Golf Club');
