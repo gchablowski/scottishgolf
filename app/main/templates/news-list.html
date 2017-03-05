@@ -6,7 +6,7 @@
 
         <div class="card">
             <ks-swiper-container override-parameters="swiperParam">
-                <ks-swiper-slide class="swiper-slide" ng-repeat="new in news">
+                <ks-swiper-slide class="swiper-slide carousel" ng-repeat="new in news">
                     <div ui-sref="main.clubFindersListDetail({ id: data.id })" 
                          class="newsCards" 
                          style="background-image: url({{new.img}}) ;">
@@ -17,7 +17,7 @@
         </div>
 
         <ks-swiper-container override-parameters="mosaicParam">
-            <ks-swiper-slide class="swiper-slide" ng-repeat="article in blog">
+            <ks-swiper-slide class="swiper-slide grid" ng-repeat="article in blog">
                 <div class="card">
                     <img ng-src="{{article.img}}">
                     <div class="item item-divider">

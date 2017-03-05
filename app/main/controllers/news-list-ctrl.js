@@ -1,6 +1,6 @@
 'use strict';
 angular.module('main')
-        .controller('NewsListCtrl', ['$scope', '$ionicModal', 'MainServ', function ($scope, $ionicModal, MainServ) {
+        .controller('NewsListCtrl', ['$scope', 'MainServ', function ($scope, MainServ) {
 
                 //get datas
                 $scope.news = MainServ.getNewsData();
