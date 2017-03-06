@@ -3,7 +3,7 @@ angular.module('main', [
     'ionic',
     'ngCordova',
     'ui.router',
-    'ksSwiper',
+    'ksSwiper'
             // TODO: load other modules selected during generation
 ])
         .config(function ($stateProvider, $urlRouterProvider) {
@@ -51,6 +51,15 @@ angular.module('main', [
                             'pageContent': {
                                 templateUrl: 'main/templates/club-finders-list-detail.html',
                                 controller: 'ClubFindersListDetailCtrl as ctrl'
+                            }
+                        }
+                    })
+                    .state('main.clubOpenList', {
+                        url: '/club-open/list',
+                        views: {
+                            'pageContent': {
+                                templateUrl: 'main/templates/club-open-list.html',
+                                controller: 'ClubOpenListCtrl as ctrl'
                             }
                         }
                     })

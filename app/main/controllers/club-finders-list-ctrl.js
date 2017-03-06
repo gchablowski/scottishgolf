@@ -16,7 +16,7 @@ angular.module('main')
                 $scope.datas = MainServ.getGolfData();
         
                 //the modal
-                $ionicModal.fromTemplateUrl('main/templates/search-modal.html', {
+                $ionicModal.fromTemplateUrl('main/templates/search-club-modal.html', {
                     scope: $scope,
                     animation: 'slide-in-up',
                 }).then(function (modal) {

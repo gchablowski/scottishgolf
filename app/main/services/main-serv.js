@@ -2,6 +2,52 @@
 angular.module('main')
         .service('MainServ', function (filterFilter) {
 
+            this.getOpenData = function () {
+
+                var datas =
+                        [
+                            {
+                                id: 1,
+                                title: 'Elmwood Golf Course',
+                                golf_id: 1,
+                                golf_name: 'Golspie Golf Club',
+                                date_begin: "2017-05-18T09:00Z",
+                                date_end: "2017-05-20T13:00Z",
+                                category: 68,
+                                region: 65,
+                            }, {
+                                id: 2,
+                                title: 'Elmwood Golf Course2',
+                                golf_id: 1,
+                                golf_name: 'Golspie Golf Club',
+                                date_begin: "2017-05-18T08:00Z",
+                                date_end: "2017-05-18T14:00Z",
+                                category: 69,
+                                region: 66,
+                            },
+                            {
+                                id: 3,
+                                title: 'Elmwood Golf Course3',
+                                golf_id: 1,
+                                golf_name: 'Golspie Golf Club',
+                                date_begin: "2017-05-20T14:00Z",
+                                date_end: "2017-05-21T14:00Z",
+                                category: 70,
+                                region: 68,
+                            },
+                         {
+                                id: 4,
+                                title: 'Elmwood Golf Course4',
+                                golf_id: 1,
+                                golf_name: 'Golspie Golf Club',
+                                date_begin: "2017-05-20T14:00Z",
+                                date_end: "2017-05-21T14:00Z",
+                                category: 70,
+                                region: 70,
+                            }];
+
+                return datas;
+            };
 
             this.getArticle = function (id, type) {
                 var datas = type == 'article' ? this.getBlogData() : this.getNewsData();

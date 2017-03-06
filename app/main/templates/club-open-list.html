@@ -1,0 +1,25 @@
+<ion-view view-title="Club Open">
+    <ion-content>
+        <div class="bar bar-header item-input-inset bar-positive">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input id="search" type="search" placeholder="Championship name / date" ng-model="searchOptions.$">
+            </label>
+            <button class="button button-icon icon ion-settings" ng-click="openModal()"></button>
+        </div>
+        <div collection-repeat="data in datas | filter : searchOptions"
+             collection-item-width="'100%'"
+             collection-item-height="getItemHeight(datas, $index)"
+             ng-style="{height: getItemHeight(datas, $index)}" >
+            <div class="item item-divider" ng-if="(getItemHeight(datas, $index)) == 90">
+                {{data.date_begin| date:'yyyy-MM-dd'}}
+            </div>
+            <div class="item"  ui-sref="main.clubFindersListDetail({ id: data.id })" >
+                {{data.title}} 
+                <span class="item-note">
+                    {{data.date_begin| date:'HH:MM'}}
+                </span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
