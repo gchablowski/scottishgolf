@@ -19,16 +19,14 @@ describe('List page', function () {
         var elements = element.all(protractor.By.css('.grid'));
         expect(elements.count()).toEqual(8);
     });
-    
 
-    /*
-     it('should allow me to go to the details page when I click on a  elment', function () {
-     var elements = element.all(protractor.By.css('.golfs')).first();
-     
-     elements.click();
-     
-     expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/#/main/club-finders/list/detail/1");
-     });
-     */
+    it('should allow me to go to the details article page when I click on an element of the grid', function () {
+        var elements = element.all(protractor.By.css('.grid .card')).first();
+
+        elements.click();
+
+        expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/#/main/news/list/detail/article/1");
+    });
+
 
 });

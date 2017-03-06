@@ -5,9 +5,11 @@
 
         <div class="card">
             <ks-swiper-container override-parameters="swiperParam">
-                <ks-swiper-slide class="swiper-slide carousel" ng-repeat="new in news">
-                    <div ui-sref="main.NewsListDetail({ type: 'news', id: new.id })" 
-                         class="newsCards" 
+                <ks-swiper-slide 
+                    class="swiper-slide carousel" 
+                    ng-repeat="new in news"
+                    ui-sref="main.NewsListDetail({ type: 'news', id: new.id })" >
+                    <div class="newsCards" 
                          style="background-image: url({{new.img}}) ;">
                         <h1>{{new.title}}</h1>
                     </div>

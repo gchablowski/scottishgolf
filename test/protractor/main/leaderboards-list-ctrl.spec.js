@@ -12,7 +12,7 @@ describe('List page', function () {
 
     it('Should get a list of elements', function () {
         var elements = element.all(protractor.By.css('.item'));
-        expect(elements.count()).toEqual(23);
+        expect(elements.count()).toEqual(24);
         var item = elements.get(0).element(protractor.By.tagName("p"));
         expect(item.getText()).toEqual('rank: 1');
     });
