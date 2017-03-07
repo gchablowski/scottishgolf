@@ -16,16 +16,28 @@ describe('club open List page', function () {
         expect(elements.get(0).getText()).toEqual('2017-05-18');
     });
 
+    it('Should get a list of elements with divider at 90px', function () {
+        var elm = element.all(protractor.By.css('.dirwrapper')).get(0).getSize().then(function (size) {
+            expect(size.height).toEqual(91);
+        });
+    });
+
+    it('Should get a list of elements without divider at 50px', function () {
+        var elm = element.all(protractor.By.css('.dirwrapper')).get(1).getSize().then(function (size) {
+            expect(size.height).toEqual(51);
+        });
+    });
+
     it('should allow me to filter by a text', function () {
 
         var elements = element.all(protractor.By.id('search'));
-        elements.sendKeys('2');
-        expect(elements.getAttribute('value')).toEqual(['2']);
+        elements.sendKeys('Course2');
+        expect(elements.getAttribute('value')).toEqual(['Course2']);
 
         var elements = element.all(protractor.By.css('.item'));
-        expect(elements.get(0).getText()).toEqual('2017-05-18');
+        expect(elements.get(1).getText()).toContain('Elmwood Golf Course2');
     });
-    
+
     it('should allow me to open a modal to add options', function () {
 
         var button = element.all(protractor.By.css('.ion-settings'));
@@ -48,12 +60,12 @@ describe('club open List page', function () {
 
         var elements = element.all(protractor.By.css('.item'));
         expect(elements.get(0).getText()).toEqual('2017-05-18');
-        
+
         var item = elements.get(1).element(protractor.By.tagName("h2"));
-        expect(item.getText()).toEqual('Elmwood Golf Course2');
+        expect(item.getText()).toContain('Elmwood Golf Course2');
     });
-    
-        it('should allow me to filter by Category options', function () {
+
+    it('should allow me to filter by Category options', function () {
 
         var button = element.all(protractor.By.css('.ion-settings'));
         button.click();
@@ -66,18 +78,18 @@ describe('club open List page', function () {
 
         var elements = element.all(protractor.By.css('.item'));
         expect(elements.get(0).getText()).toEqual('2017-05-18');
-        
+
         var item = elements.get(1).element(protractor.By.tagName("h2"));
-        expect(item.getText()).toEqual('Elmwood Golf Course');
+        expect(item.getText()).toContain('Elmwood Golf Course');
     });
-    
-   /*
-    it('should allow me to go to the details page when I click on a  elment', function () {
-        var elements = element.all(protractor.By.css('.golfs')).first();
-        
-        elements.click();
-        
-        expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/#/main/club-finders/list/detail/1");
-    });*/
-    
+
+    /*
+     it('should allow me to go to the details page when I click on a  elment', function () {
+     var elements = element.all(protractor.By.css('.golfs')).first();
+     
+     elements.click();
+     
+     expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/#/main/club-finders/list/detail/1");
+     });*/
+
 });
