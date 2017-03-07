@@ -1,6 +1,6 @@
 'use strict';
 
-describe('List page', function () {
+describe('club finder List page', function () {
 
     beforeEach(function () {
         browser.get('/#/main/club-finders/list');
