@@ -28,13 +28,13 @@
             </ion-item>
 
             <ion-item class="item item-icon">
-                Entry fee : {{data.fee}}
+                Entry fee : £{{data.fee}} {{data.fee_for}}
             </ion-item>
             <ion-item class="item item-icon">
                 Closing date : {{data.closing}}
             </ion-item>
 
-            <button class="button button-block button-positive">
+            <button ui-sref="main.clubOpenListDetailSignup({ id: data.id })" class="button button-block button-positive">
                 Sign in
             </button>
     </ion-content>

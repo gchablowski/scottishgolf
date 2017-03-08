@@ -72,6 +72,15 @@ angular.module('main', [
                             }
                         }
                     })
+                    .state('main.clubOpenListDetailSignup', {
+                        url: '/club-open/list/detail/signup/:id',
+                        views: {
+                            'pageContent': {
+                                templateUrl: 'main/templates/club-open-list-detail-signup.html',
+                                controller: 'ClubOpenListDetailSignupCtrl as ctrl'
+                            }
+                        }
+                    })
                     .state('main.leaderboardsList', {
                         url: '/leaderboards/list',
                         views: {

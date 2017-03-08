@@ -2,11 +2,15 @@
 angular.module('main')
         .service('MainServ', function (filterFilter) {
 
+            this.signup = function (data) {
+                return true;
+            };
+
             this.getOpen = function (id) {
                 var datas = this.getOpenData();
                 var filter = filterFilter(datas, {id: id});
                 return filter[0] ? filter[0] : {};
-            }
+            };
 
             this.getOpenData = function () {
 
@@ -23,8 +27,9 @@ angular.module('main')
                                 region: 65,
                                 handicap: "gents 28 ladies 36",
                                 format: "Tri Am Stableford",
-                                fee: "£27 per team of 3",
-                                closing:"2017-05-20T13:00Z"
+                                fee: "27",
+                                fee_for: "per team of 3",
+                                closing: "2017-05-20T13:00Z"
                             }, {
                                 id: 2,
                                 title: 'Elmwood Golf Course2',
@@ -36,8 +41,9 @@ angular.module('main')
                                 region: 66,
                                 handicap: "gents 28 ladies 36",
                                 format: "Tri Am Stableford",
-                                fee: "£27 per team of 3",
-                                closing:"2017-05-20T13:00Z"
+                                fee: "27",
+                                fee_for: "per team of 3",
+                                closing: "2017-05-20T13:00Z"
                             },
                             {
                                 id: 3,
@@ -50,8 +56,9 @@ angular.module('main')
                                 region: 68,
                                 handicap: "gents 28 ladies 36",
                                 format: "Tri Am Stableford",
-                                fee: "£27 per team of 3",
-                                closing:"2017-05-20T13:00Z"
+                                fee: "27",
+                                fee_for: "per team of 3",
+                                closing: "2017-05-20T13:00Z"
                             },
                             {
                                 id: 4,
@@ -64,8 +71,9 @@ angular.module('main')
                                 region: 70,
                                 handicap: "gents 28 ladies 36",
                                 format: "Tri Am Stableford",
-                                fee: "£27 per team of 3",
-                                closing:"2017-05-20T13:00Z"
+                                fee: "27",
+                                fee_for: "per team of 3",
+                                closing: "2017-05-20T13:00Z"
                             }];
 
                 return datas;
