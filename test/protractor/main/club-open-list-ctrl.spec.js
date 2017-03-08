@@ -83,13 +83,13 @@ describe('club open List page', function () {
         expect(item.getText()).toContain('Elmwood Golf Course');
     });
 
-    /*
-     it('should allow me to go to the details page when I click on a  elment', function () {
-     var elements = element.all(protractor.By.css('.golfs')).first();
+    
+     it('should allow me to go to the details page when I click on an element', function () {
+     var elements = element.all(protractor.By.css('.item')).get(1);
      
      elements.click();
      
-     expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/#/main/club-finders/list/detail/1");
-     });*/
+     expect(browser.getCurrentUrl()).toEqual("http://localhost:3000/#/main/club-open/list/detail/1");
+     });
 
 });
