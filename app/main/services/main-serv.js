@@ -2,6 +2,12 @@
 angular.module('main')
         .service('MainServ', function (filterFilter) {
 
+            this.getOpen = function (id) {
+                var datas = this.getOpenData();
+                var filter = filterFilter(datas, {id: id});
+                return filter[0] ? filter[0] : {};
+            }
+
             this.getOpenData = function () {
 
                 var datas =
@@ -15,6 +21,10 @@ angular.module('main')
                                 date_end: "2017-05-20T13:00Z",
                                 category: 68,
                                 region: 65,
+                                handicap: "gents 28 ladies 36",
+                                format: "Tri Am Stableford",
+                                fee: "£27 per team of 3",
+                                closing:"2017-05-20T13:00Z"
                             }, {
                                 id: 2,
                                 title: 'Elmwood Golf Course2',
@@ -24,6 +34,10 @@ angular.module('main')
                                 date_end: "2017-05-18T14:00Z",
                                 category: 69,
                                 region: 66,
+                                handicap: "gents 28 ladies 36",
+                                format: "Tri Am Stableford",
+                                fee: "£27 per team of 3",
+                                closing:"2017-05-20T13:00Z"
                             },
                             {
                                 id: 3,
@@ -34,8 +48,12 @@ angular.module('main')
                                 date_end: "2017-05-21T14:00Z",
                                 category: 70,
                                 region: 68,
+                                handicap: "gents 28 ladies 36",
+                                format: "Tri Am Stableford",
+                                fee: "£27 per team of 3",
+                                closing:"2017-05-20T13:00Z"
                             },
-                         {
+                            {
                                 id: 4,
                                 title: 'Elmwood Golf Course4',
                                 golf_id: 1,
@@ -44,6 +62,10 @@ angular.module('main')
                                 date_end: "2017-05-21T14:00Z",
                                 category: 70,
                                 region: 70,
+                                handicap: "gents 28 ladies 36",
+                                format: "Tri Am Stableford",
+                                fee: "£27 per team of 3",
+                                closing:"2017-05-20T13:00Z"
                             }];
 
                 return datas;

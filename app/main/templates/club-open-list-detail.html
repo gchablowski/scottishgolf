@@ -1,0 +1,41 @@
+<ion-view view-title="{{data.title}}">
+    <!-- do you want padding? -->
+    <ion-content class="padding">
+
+        <!-- content goes here -->
+        <ion-list>
+            <ion-item class="item item-divider">
+                {{data.title}}
+            </ion-item>
+            <ion-item class="item item-icon">
+                Club : <a ui-sref="main.clubFindersListDetail({ id: data.id })">{{data.golf_name}}</a>
+            </ion-item>
+
+            <ion-item class="item item-icon">
+                Start : {{data.date_begin| date:'yyyy-MM-dd HH:MM'}}
+            </ion-item>
+
+            <ion-item class="item item-icon">
+                End : {{data.date_end| date:'yyyy-MM-dd HH:MM'}}
+            </ion-item>
+
+            <ion-item class="item item-icon">
+                Handicap limit : {{data.handicap}}
+            </ion-item>
+
+            <ion-item class="item item-icon">
+                Format : {{data.format}}
+            </ion-item>
+
+            <ion-item class="item item-icon">
+                Entry fee : {{data.fee}}
+            </ion-item>
+            <ion-item class="item item-icon">
+                Closing date : {{data.closing}}
+            </ion-item>
+
+            <button class="button button-block button-positive">
+                Sign in
+            </button>
+    </ion-content>
+</ion-view>

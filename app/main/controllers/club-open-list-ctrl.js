@@ -5,21 +5,6 @@ angular.module('main')
                 //search options in the modal
                 $scope.searchOptions = {};
 
-                //make a directive ???
-                $scope.getItemHeight = function (datas, index) {
-                    
-                    if(!index){
-                        return 90;
-                    }
-                    
-                    var preItemDate = datas[index - 1].date_begin.substring(0, 10);
-                    var curItemDate = datas[index].date_begin.substring(0, 10);
-
-                    return preItemDate != curItemDate ? 90 : 50;
-                };
-
-
-
                 //get the list of the golfs
                 $scope.datas = MainServ.getOpenData();
 
