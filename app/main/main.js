@@ -89,14 +89,5 @@ angular.module('main', [
                                 controller: 'LeaderboardsListCtrl as ctrl'
                             }
                         }
-                    })
-                    .state('main.debug', {
-                        url: '/debug',
-                        views: {
-                            'pageContent': {
-                                templateUrl: 'main/templates/debug.html',
-                                controller: 'DebugCtrl as ctrl'
-                            }
-                        }
                     });
         });
